@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">  
    
       <link rel="stylesheet" href="css/index.css">
  </head>
@@ -12,14 +12,14 @@ function myPlayer() {
   var x = document.getElementById("mySelect").selectedIndex;
   var y = document.getElementById("mySelect").options;
   localStorage.setItem("getshape",y[x].value);
- //alert(y[x].text);
+ );
  }
 
 function myBackdrop() {
   var x = document.getElementById("myScene").selectedIndex;
   var y = document.getElementById("myScene").options;
   localStorage.setItem("getimage",y[x].value);
- //alert(y[x].text);
+ );
  
 }
 </script>
