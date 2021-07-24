@@ -745,12 +745,12 @@ function stopfallsound() {
    if(localStorage.getItem("bestscore")==null) {   
            localStorage.setItem("bestscore",0);
     }
- /*  if(localStorage.getItem("getimage")==null) {   
+  if(localStorage.getItem("getimage")==null) {   
            localStorage.setItem("getimage","./image/rain.jpg");
     }
     if(localStorage.getItem("shape")==null) {   
            localStorage.setItem("shape","Square");
-    }*/
+    }
     world.draw();
     player.draw();
     player.score();
