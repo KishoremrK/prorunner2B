@@ -17,7 +17,7 @@ var hasplayed = false;
 var shape = localStorage.getItem("getshape");
 var myImage = localStorage.getItem("getimage");
 var defaultShape = "Square";
-//var myImage = "./image/city.jfif";
+
 
 mySound = document.getElementById("myaudio");
 mySound.muted = false;
@@ -744,6 +744,12 @@ function stopfallsound() {
  function update() {
    if(localStorage.getItem("bestscore")==null) {   
            localStorage.setItem("bestscore",0);
+    }
+   if(localStorage.getItem("getimage")==null) {   
+           localStorage.setItem("getimage","./image/rain.jpg");
+    }
+    if(localStorage.getItem("shape")==null) {   
+           localStorage.setItem("shape","Square");
     }
     world.draw();
     player.draw();
