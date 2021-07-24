@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   
+      <link rel="stylesheet" href="css/index.css">
+ </head>
+<script src="js/runner.js"></script>
+<script>
+function myPlayer() {
+  var x = document.getElementById("mySelect").selectedIndex;
+  var y = document.getElementById("mySelect").options;
+  localStorage.setItem("getshape",y[x].value);
+ //alert(y[x].text);
+ }
+
+function myBackdrop() {
+  var x = document.getElementById("myScene").selectedIndex;
+  var y = document.getElementById("myScene").options;
+  localStorage.setItem("getimage",y[x].value);
+ //alert(y[x].text);
+ 
+}
+</script>
+
+<h1 data-shadow='Prorunner'>Prorunner</h1>
+<center>
+  <br>
+<div class="wrapper">
+	<div class="mask"></div>
+</div><br><br>
+
+<select id="mySelect" onchange = "myPlayer()" style = "font-weight:bold; font-size:15px;">
+  <option value="Square">SELECT PLAYER</option>
+  <option value="Square">SQUARE</option>
+  <option value="Triangle">TRIANGLE</option>
+ </select> &emsp;&emsp;
+
+<select id="myScene" onchange = "myBackdrop()" style = "font-weight:bold; font-size:15px;">
+  <option value="./image/forest.jpg">SELECT LANDSCAPE</option>
+  <option value="./image/city.jfif">CITY</option>
+  <option value="./image/snow.jpg">SNOW</option>
+  <option value="./image/rain.jpg">RAIN</option>
+  <option value="./image/forest.jpg">FOREST</option>
+  <option value="./image/grass.jpg">GRASSLAND</option>
+  <option value="./image/mountain.jpg">MOUNTAIN</option>
+ </select>
+<br><br>
+
+ <button id= "enter" onClick= "location.href = 'runner.html';" style= "font-weight:bold; ">ENTER</button><br><br><br>
+
+  <p style = "font-weight:bold; font-size:25px;">< GAME CONTROLS : USE MOUSE OR SPACE BAR TO JUMP ></p>
+ 
+</center> 
+  </html>
