@@ -12,15 +12,18 @@ function myPlayer() {
   var x = document.getElementById("mySelect").selectedIndex;
   var y = document.getElementById("mySelect").options;
   localStorage.setItem("getshape",y[x].value);
- //alert(y[x].text);
- }
+  }
 
 function myBackdrop() {
   var x = document.getElementById("myScene").selectedIndex;
   var y = document.getElementById("myScene").options;
   localStorage.setItem("getimage",y[x].value);
- //alert(y[x].text);
- 
+ }
+function setvalue() {
+if(localStorage.getItem("getimage")==null)
+     localStorage.setItem("getimage","./image/city.jfif");
+if(localStorage.getItem("getshape")==null)
+     localStorage.setItem("getshape","Square");
 }
 </script>
 
@@ -30,7 +33,7 @@ function myBackdrop() {
 <div class="wrapper">
 	<div class="mask"></div>
 </div><br><br>
-
+<body onload = "setvalue();">
 <select id="mySelect" onchange = "myPlayer()" style = "font-weight:bold; font-size:15px;">
   <option value="Square">SELECT PLAYER</option>
   <option value="Square">SQUARE</option>
@@ -47,7 +50,7 @@ function myBackdrop() {
   <option value="./image/mountain.jpg">MOUNTAIN</option>
  </select>
 <br><br>
-
+</body>
  <button id= "enter" onClick= "location.href = 'runner.html';" style= "font-weight:bold; ">ENTER</button><br><br><br>
 
   <p style = "font-weight:bold; font-size:25px;">< GAME CONTROLS : USE MOUSE OR SPACE BAR TO JUMP ></p>
